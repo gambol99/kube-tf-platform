@@ -10,12 +10,6 @@ variable "public_zone_name" {
 variable "private_zone_name" {
   description = "The internal route53 domain associated to the environment"
 }
-variable "kms_master_id" {
-  description = "The AWS KMS id this environment is using"
-}
-variable "secrets_bucket_name" {
-  description = "The name of the s3 bucket which is holding the secrets"
-}
 variable "ssh_access_list" {
   description = "A comma separated list of ip addresses to permit external ssh access"
   type        = "list"
