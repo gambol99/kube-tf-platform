@@ -10,16 +10,3 @@ resource "aws_route53_zone" "public" {
     Role        = "dns-zone"
   }
 }
-
-## Route53 Private Domain
-resource "aws_route53_zone" "private" {
-  name            = "${var.private_zone_name}"
-  comment         = "Kubernetes Private Domain for ${var.environment} environment"
-  vpc_id          = "${aws_vpc.vpc.id}"
-
-  tags {
-    Name        = "${var.private_zone_name}"
-    Environment = "${var.environment}"
-    Role        = "dns-zone"
-  }
-}

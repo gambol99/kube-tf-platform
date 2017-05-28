@@ -7,9 +7,6 @@ variable "environment" {
 variable "public_zone_name" {
   description = "The route53 domain associated to the environment"
 }
-variable "private_zone_name" {
-  description = "The internal route53 domain associated to the environment"
-}
 variable "ssh_access_list" {
   description = "A comma separated list of ip addresses to permit external ssh access"
   type        = "list"
@@ -18,13 +15,6 @@ variable "ssh_access_list" {
 #
 ## AWS PROVIDER ##
 #
-#variable "aws_shared_credentials_file" {
-#  description = "The file containing the AWS credentials"
-#  default     = "/root/.aws/credentials"
-#}
-#variable "aws_profile" {
-#  description = "The AWS profile to use from within the credentials file"
-#}
 variable "aws_region" {
   description = "The AWS Region we are building the cluster in"
 }

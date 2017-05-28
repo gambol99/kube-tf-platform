@@ -4,7 +4,6 @@ output "elb_sg"                  { value = "${aws_security_group.elb.id}" }
 output "mgmt_sg"                 { value = "${aws_security_group.mgmt.id}" }
 output "nat_route_table"         { value = "${aws_route_table.nat_routes.id}" }
 output "nat_sg"                  { value = "${aws_security_group.public.id}" }
-output "private_zone"            { value = "${aws_route53_zone.private.id}" }
 output "public_zone"             { value = "${aws_route53_zone.public.id}" }
 output "secure_sg"               { value = "${aws_security_group.secure.id}" }
 output "vpc_id"                  { value = "${aws_vpc.vpc.id}" }
